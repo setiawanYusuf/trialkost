@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <list-kost
-        :user = "{{$userJson}}"
+        :user = "{{$user}}"
         :cities = "{{$cities}}"
     ></list-kost>
 </div>

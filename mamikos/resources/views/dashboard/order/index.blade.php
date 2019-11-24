@@ -4,12 +4,9 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <owner-form
-                :kost="{{$kost}}"
-                :config="{{$config}}"
-                :user="{{$user}}"
-            >
-            </owner-form>
+            <list-order
+                :user="{{$userJson}}"
+            ></list-order>
         </div>
     </div>
 </div>

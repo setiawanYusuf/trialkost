@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        @foreach($kosts as $val)
+        <!-- @foreach($kosts as $val)
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="{{$val->image_url}}" alt="Card image cap">
                 <div class="card-body">
@@ -22,7 +22,7 @@
 
                 @if ($user->role_id == 1 || $user->role_id == 2)
                     <div class="card-body">
-                        <a href="{{route('dashboard.owner.add')}}">
+                        <a href="{{route('owner.add')}}">
                             <button
                                 type="button"
                                 class="btn btn-success"
@@ -52,7 +52,7 @@
 
 
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
 @endsection

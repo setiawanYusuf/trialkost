@@ -4,12 +4,12 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <owner-form
+            <order-form
                 :kost="{{$kost}}"
-                :config="{{$config}}"
                 :user="{{$user}}"
+                :config="{{$config}}"
             >
-            </owner-form>
+            </order-form>
         </div>
     </div>
 </div>

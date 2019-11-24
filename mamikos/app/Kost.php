@@ -3,15 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Relations\Relation;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 
 class Kost extends Model
 {
-    use Notifiable;
-
     /**
      * The attributes that are mass assignable.
      *
@@ -38,5 +34,42 @@ class Kost extends Model
     public function user(): Relation
     {
         return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function scopeOwner(Builder $query, $id = null): Builder
+    {
+        if ($id) {
+            return $query->where('user_id', $id);
+        }
+
+        $query;
+    }
+
+    public function scopeName(Builder $query, string $name = null): Builder
+    {
+        if ($name) {
+            return $query->where('name', $name);
+        }
+
+        return $query;
+    }
+
+    public function scopeCity(Builder $query, string $city = null): Builder
+    {
+        if ($city) {
+            return $query->where('city', $city);
+        }
+
+        return $query;
+    }
+
+    public function scopePrice(Builder $query, $priceFrom = null, $priceTo = null, $sortPrice = 'asc'): Builder
+    {
+        if ($priceFrom && $priceTo) {
+            return $query->whereBetween('price', [$priceFrom, $priceTo])
+                ->orderBy('price', $sortPrice);
+        }
+
+        return $query;
     }
 }
