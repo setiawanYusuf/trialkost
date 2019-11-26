@@ -26,8 +26,7 @@ class Order extends Controller
                     return $val;
                 }
             })->filter();
-/* dump(OrderModel::with('user', 'kost.user')
-->get()->toJson()); */
+
         return response(
             $orders,
             200

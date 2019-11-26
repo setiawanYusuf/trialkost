@@ -26,6 +26,7 @@ class User extends Authenticatable
         'password',
         'role_id',
         'credit_point',
+        'cp_refilled_at'
     ];
 
     /**

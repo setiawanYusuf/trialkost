@@ -18,9 +18,9 @@ class CreateKostsTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->string('name');
             $table->longText('description');
-            $table->unsignedBigInteger('price');
-            $table->unsignedBigInteger('room');
-            $table->unsignedBigInteger('booked_room');
+            $table->unsignedInteger('price');
+            $table->unsignedInteger('room');
+            $table->unsignedInteger('booked_room');
             $table->string('city');
             $table->string('image_url', 500)->nullable();
             $table->timestamps();

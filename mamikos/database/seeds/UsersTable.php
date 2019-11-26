@@ -19,6 +19,7 @@ class UsersTable extends Seeder
                 'name' => 'Dummy',
                 'email' => 'dummy@dummy.com',
                 'email_verified_at' => Carbon::now(),
+                'cp_refilled_at' => Carbon::now(),
                 'password' => bcrypt('12345678'),
                 'credit_point' => 0,
             ]);
@@ -30,6 +31,7 @@ class UsersTable extends Seeder
                 'name' => 'Owner',
                 'email' => 'owner@dummy.com',
                 'email_verified_at' => Carbon::now(),
+                'cp_refilled_at' => Carbon::now(),
                 'password' => bcrypt('12345678'),
                 'credit_point' => 0,
             ]);
@@ -41,6 +43,7 @@ class UsersTable extends Seeder
                 'name' => 'Premium',
                 'email' => 'premium@dummy.com',
                 'email_verified_at' => Carbon::now(),
+                'cp_refilled_at' => Carbon::now(),
                 'password' => bcrypt('12345678'),
                 'credit_point' => 40,
             ]);
@@ -52,6 +55,7 @@ class UsersTable extends Seeder
                 'name' => 'Regular',
                 'email' => 'regular@dummy.com',
                 'email_verified_at' => Carbon::now(),
+                'cp_refilled_at' => Carbon::now(),
                 'password' => bcrypt('12345678'),
                 'credit_point' => 20,
             ]);
